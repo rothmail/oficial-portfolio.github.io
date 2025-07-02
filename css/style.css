@@ -1,3 +1,11 @@
+:root {
+    --quase-branco: #e6dfee;
+    --roxo-claro: #a17ddc;
+    --azul-roxo: #5B61B2;
+    --azul-escuro: #2F80E4;
+    --azul-claro: #6DA0E1;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +17,10 @@ html, body {
 }
 
 header {
-    background-color: red;
+    background-color: var(--azul-roxo);
+    position: fixed;
+    width: 100%;
+    height: 10%;
 }
 
 main {
@@ -18,21 +29,25 @@ main {
 }
 
 #sobre-mim {
-    background-color: purple;
+    background-color: var(--roxo-claro);
 }
 
 #fotos {
-    background-color: yellow;
+    background-color: var(--azul-claro);
 }
 
 #competencias {
-    background-color: brown;
+    background-color: var(--quase-branco);
 }
 
 #contatos {
-    background-color: burlywood;
+    background-color: var(--azul-escuro);
 }
 
 footer {
-    background-color: blue;
+    background-color: var(--azul-roxo);
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    font-size: smaller;
 }
