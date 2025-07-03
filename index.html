@@ -1,42 +1,256 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio || Amanda</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amanda Rothmann | Portfólio Criativo</title>
+  <meta name="theme-color" content="#A75F37" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+  <style>
+    :root {
+      --primary: #A75F37;
+      --secondary: #F2D6CE;
+      --accent: #CA8E82;
+      --dark-bg: #292421;
+      --dark-surface: #7A958F;
+      --light-bg: #F2E7DD;
+      --text-dark: #F5EFEB;
+      --text-light: #292421;
+      --shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light-bg);
+      color: var(--text-light);
+      padding: 2rem;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    body.dark {
+      background: var(--dark-bg);
+      color: var(--text-dark);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    #toggleTheme {
+      margin-left: 1rem;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .hero {
+      text-align: center;
+      margin: 5rem 0;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      color: var(--accent);
+    }
+
+    .btn {
+      margin-top: 2rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+    }
+
+    .section {
+      margin-top: 4rem;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .sobre {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .sobre img {
+      max-width: 300px;
+      border-radius: 50%;
+      box-shadow: var(--shadow);
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    .card {
+      flex: 0 0 300px;
+      background: var(--dark-surface);
+      color: var(--text-dark);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--accent);
+      color: var(--accent);
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Amanda Rothmann</h1>
-    </header>
+  <header>
+    <div class="logo">Amanda Rothmann</div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+      <button id="toggleTheme">🌓</button>
+    </nav>
+  </header>
 
-    <main id="sobre-mim">
-        <section>
-            <p>oioioi</p>
-        </section>
-    </main>
+  <section class="hero">
+    <h1>Transformando ideias em experiências visuais</h1>
+    <p>Front-End Developer • UI/UX Explorer • Criadora digital</p>
+    <a class="btn" href="#projetos">Ver Projetos</a>
+  </section>
 
-    <main id="fotos">
-        <section>
-            <p>oioioi</p>
-        </section>
-    </main>
+  <section id="sobre" class="section">
+    <h2>Sobre Mim</h2>
+    <div class="sobre">
+      <img src="img/20250429_130129.jpg" alt="Amanda Rothmann">
+      <p>Sou apaixonada por interfaces elegantes e intuitivas. Meu trabalho combina atenção ao detalhe com foco em usabilidade e performance. A cada projeto, busco criar uma jornada cativante entre o usuário e o produto digital.</p>
+    </div>
+  </section>
 
-    <main id="competencias">
-        <section>
-            <p>oioioi</p>
-        </section>
-    </main>
+  <section id="projetos" class="section">
+    <h2>Projetos</h2>
+    <div class="carousel">
+      <div class="card">
+        <h3>Pokédex</h3>
+        <p>Interface que consome a PokéAPI para exibir dados de Pokémon.</p>
+      </div>
+      <div class="card">
+        <h3>Gerenciador de Tarefas</h3>
+        <p>Kanban com suporte a localStorage e sistema de tarefas vencidas.</p>
+      </div>
+      <div class="card">
+        <h3>Portfólio Animado</h3>
+        <p>Landing page com GSAP e animações de scroll envolventes.</p>
+      </div>
+    </div>
+  </section>
 
-    <main id="contatos">
-        <section>
-            <p>oioioi</p>
-        </section>
-    </main>
+  <section id="contato" class="section">
+    <h2>Contato</h2>
+    <p>Quer trocar uma ideia ou colaborar em um projeto? Me chama!</p>
+    <form id="form-contato" style="margin-top: 1.5rem; max-width: 500px;">
+      <input type="text" name="user_name" placeholder="Seu nome" required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem;">
+      <input type="email" name="user_email" placeholder="Seu e-mail" required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem;">
+      <textarea name="message" placeholder="Sua mensagem..." required style="width: 100%; padding: 0.75rem; height: 120px;"></textarea>
+      <button class="btn" type="submit" style="margin-top: 1rem;">Enviar</button>
+      <p id="mensagem-status" style="margin-top: 1rem;"></p>
+    </form>
+  </section>
 
-    <footer id="copyright-footer">
-        <p>&copy; por Amanda Rothmann Piovesana</p>
-    </footer>
+  <footer>
+    &copy; 2025 Amanda Rothmann. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    // Tema automático baseado no horário
+    const hora = new Date().getHours();
+    if (hora >= 18 || hora < 6) {
+      document.body.classList.add('dark');
+    }
+
+    // Toggle de tema
+    document.getElementById('toggleTheme').addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+
+    // EmailJS
+    emailjs.init("SEU_USER_ID_AQUI"); // Substitua pelo seu User ID
+
+    document.getElementById('form-contato').addEventListener('submit', function (e) {
+      e.preventDefault();
+      emailjs.sendForm('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', this)
+        .then(() => {
+          document.getElementById('mensagem-status').textContent = 'Mensagem enviada com sucesso!';
+          this.reset();
+        }, () => {
+          document.getElementById('mensagem-status').textContent = 'Erro ao enviar mensagem. Tente novamente.';
+        });
+    });
+  </script>
 </body>
+
 </html>
